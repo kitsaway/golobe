@@ -57,13 +57,15 @@ const Header = () => {
         [theme.breakpoints.up("bg")]: { padding: "21px 54px" },
       }}
     >
-      <img
-        className="logo"
-        src="https://ik.imagekit.io/xe8oxb5c5l/Golobe/Logo.png"
-        alt="Golobe Logo"
-        width={110}
-        height={36}
-      />
+      <Link to="/">
+        <img
+          className="logo"
+          src="https://ik.imagekit.io/xe8oxb5c5l/Golobe/Logo.png"
+          alt="Golobe Logo"
+          width={110}
+          height={36}
+        />
+      </Link>
       {/* Desktop/Tablet Menu */}
       <Box sx={{ display: { xs: "none", md: "flex" } }} className="nav-bar">
         <Box
