@@ -1,0 +1,46 @@
+.header-container.MuiContainer-root {
+  position: relative;
+  background-color: var(--white);
+  box-shadow: 0px 4px 16px rgba(17, 34, 17, 0.05);
+}
+
+.nav-bar {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--blackish-green);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.header-link.mobile {
+  color: var(--blackish-green);
+}
+
+.signup {
+  background-color: var(--blackish-green);
+  color: var(--white);
+  padding: 12px 24px;
+  border-radius: 16px;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
