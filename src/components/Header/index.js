@@ -4,7 +4,7 @@ import FlightIcon from "@mui/icons-material/Flight";
 import BedIcon from "@mui/icons-material/Bed";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
-import theme from "../Theme";
+import theme from "../../Theme";
 import { IconButton, Menu, MenuItem } from "@mui/material";
 
 const pages = [
