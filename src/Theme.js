@@ -5,9 +5,9 @@ let theme = createTheme({
     values: {
       xs: 0,
       sm: 300,
-      md: 600,
-      bg: 900,
-      lg: 1200,
+      md: 700,
+      bg: 1000,
+      lg: 1400,
     },
   },
 });
