@@ -38,6 +38,7 @@
 }
 
 .login-logo {
+  cursor: pointer;
   margin-bottom: 64px;
 }
 
