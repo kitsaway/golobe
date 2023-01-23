@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Container, Box, Typography, TextField, Button } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const RecoverPasswordForm = () => {
+  const navigate = useNavigate();
   return (
     <Container
       sx={{
@@ -24,7 +25,12 @@ const RecoverPasswordForm = () => {
           Don’t worry, happens to all of us. Enter your email below to recover
           your password
         </Typography>
-        <Box component="form" className="form" autoComplete="off">
+        <Box
+          component="form"
+          className="form"
+          autoComplete="off"
+          onSubmit={() => navigate("/verify-code")}
+        >
           <TextField
             type="email"
             fullWidth
