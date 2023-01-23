@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Container,
   Box,
@@ -16,7 +16,7 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 const LoginForm = () => {
-  const navigate = useNavigate();
+  
   const [showPassword, setShowPassword] = useState(false);
   const [checked, setChecked] = useState(false);
 
@@ -39,14 +39,6 @@ const LoginForm = () => {
       }}
       className="login-container"
     >
-      <img
-        src="https://ik.imagekit.io/xe8oxb5c5l/Golobe/Logo.png"
-        alt="Golobe logo"
-        width={110}
-        height={36}
-        className="login-logo"
-        onClick={() => navigate("/")}
-      />
       <Box className="form-container">
         <Typography variant="h2" className="h2">
           Login
@@ -103,7 +95,7 @@ const LoginForm = () => {
               className="checkbox-label"
               color="dark"
             />
-            <Link to="/" className="orange">
+            <Link to="/recover-password" className="orange">
               Forgot Password
             </Link>
           </FormGroup>
