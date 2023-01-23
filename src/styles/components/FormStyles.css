@@ -30,14 +30,23 @@
 }
 
 .form .submit-btn {
-  margin: 40px auto;
+  margin: 30px auto;
+  padding: 15px 12px;
   color: var(--blackish-green);
   font-weight: 600;
   text-transform: capitalize;
   background-color: var(--mint-green);
 }
 
+.form-container .back-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 34px;
+}
+
 .form-logo {
   cursor: pointer;
-  margin-bottom: 64px;
+  margin: 34px 0;
 }
