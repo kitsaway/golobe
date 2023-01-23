@@ -16,7 +16,6 @@ import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 
 const LoginForm = () => {
-  
   const [showPassword, setShowPassword] = useState(false);
   const [checked, setChecked] = useState(false);
 
@@ -49,6 +48,7 @@ const LoginForm = () => {
         <Box component="form" className="form" autoComplete="off">
           <TextField
             className="input"
+            type="email"
             label="Email"
             fullWidth
             color="neutral"
