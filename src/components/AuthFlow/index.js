@@ -24,7 +24,7 @@ const AuthFlow = ({ form }) => {
           alt="Golobe logo"
           width={110}
           height={36}
-          className="login-logo"
+          className="form-logo"
           onClick={() => navigate("/")}
         />
         {form}
