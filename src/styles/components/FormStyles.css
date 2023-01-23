@@ -1,9 +1,9 @@
-.login-container.MuiContainer-root {
+.form-container.MuiContainer-root {
   width: 100%;
   padding: 0;
 }
 
-.login-container .h2.MuiTypography-root {
+.form-container .h2.MuiTypography-root {
   color: var(--black);
   padding-bottom: 12px;
 }
@@ -37,7 +37,7 @@
   background-color: var(--mint-green);
 }
 
-.login-logo {
+.form-logo {
   cursor: pointer;
   margin-bottom: 64px;
 }
