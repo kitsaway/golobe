@@ -15,6 +15,7 @@ const AuthFlow = ({ form }) => {
         alignItems: "flex-start",
         flexDirection: { xs: "column", md: "row" },
         m: "26px auto",
+        padding: "0 25px",
         overflow: "hidden",
       }}
     >
