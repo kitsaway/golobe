@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.form-container .h2.MuiTypography-root {
+.form-box .h2.MuiTypography-root {
   color: var(--black);
   padding-bottom: 12px;
 }
