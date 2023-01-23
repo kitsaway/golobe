@@ -1,6 +1,37 @@
 import { createTheme, responsiveFontSizes } from "@mui/material";
 
 let theme = createTheme({
+  palette: {
+    primary: {
+      main: "#0971f1",
+      darker: "#053e85",
+    },
+    neutral: {
+      main: "#79747E",
+      contrastText: "#fff",
+    },
+    dark: {
+      main: "#112211",
+      contrastText: "#fff",
+    },
+  },
+  typography: {
+    fontFamily: ["Montserrat", "sans-serif"].join(","),
+    h2: {
+      fontWeight: 600,
+      lineHeight: 1,
+    },
+    body1: {
+      fontWeight: 400,
+      fontSize: "16px",
+      color: "#112211",
+    },
+    body2: {
+      fontWeight: 600,
+      fontSize: "14px",
+      color: "#112211",
+    },
+  },
   breakpoints: {
     values: {
       xs: 0,
