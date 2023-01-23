@@ -1,0 +1,53 @@
+.login-container.MuiContainer-root {
+  width: 100%;
+  padding: 0;
+}
+
+.login-container .h2.MuiTypography-root {
+  color: var(--black);
+  padding-bottom: 12px;
+}
+
+.form {
+  margin-top: 48px;
+}
+
+.form .input {
+  margin: 12px auto;
+}
+
+.form .checkbox-label .MuiTypography-root{
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--blackish-green);
+}
+
+.form .orange {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--slamon-orange);
+  text-decoration: none;
+}
+
+.form .submit-btn {
+  margin: 40px auto;
+  color: var(--blackish-green);
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: var(--mint-green);
+}
+
+.login-logo {
+  margin-bottom: 64px;
+}
+
+.swiper-img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.swiper-pagination-bullet.bullet-active {
+  width: 25px;
+  border-radius: 5px;
+  background: var(--mint-green)
+}
