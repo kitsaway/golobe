@@ -12,13 +12,13 @@ const AuthFlow = ({ form }) => {
       sx={{
         width: "100%",
         justifyContent: { xs: "center", md: "space-evenly" },
-        alignItems: "center",
+        alignItems: "flex-start",
         flexDirection: { xs: "column", md: "row" },
         m: "26px auto",
         overflow: "hidden",
       }}
     >
-      <Grid item xs={11} md={4}>
+      <Grid item xs={11} md={4.5}>
         <img
           src="https://ik.imagekit.io/xe8oxb5c5l/Golobe/Logo.png"
           alt="Golobe logo"
