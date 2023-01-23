@@ -1,0 +1,10 @@
+.swiper-img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.swiper-pagination-bullet.bullet-active {
+  width: 25px;
+  border-radius: 5px;
+  background: var(--mint-green)
+}
