@@ -4,8 +4,8 @@ import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import "./styles/styles";
 import theme from "./Theme";
-import Header from "./components/Header";
 import App from "./App";
+import Login from './components/Login/index';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,9 +13,9 @@ root.render(
     <BrowserRouter>
       <ThemeProvider theme={theme}>
         <CssBaseline enableColorScheme />
-        <Header />
         <Routes>
           <Route path="/" element={<App />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>
