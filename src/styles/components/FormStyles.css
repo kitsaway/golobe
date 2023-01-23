@@ -16,7 +16,7 @@
   margin: 12px auto;
 }
 
-.form .checkbox-label .MuiTypography-root{
+.form .checkbox-label .MuiTypography-root {
   font-weight: 500;
   font-size: 14px;
   color: var(--blackish-green);
@@ -36,6 +36,14 @@
   font-weight: 600;
   text-transform: capitalize;
   background-color: var(--mint-green);
+}
+
+.form .submit-btn:hover {
+  background-color: var(--mint-green-hover);
+}
+
+.form .submit-btn:focus {
+  background-color: var(--mint-green-focus);
 }
 
 .form-container .back-btn {
