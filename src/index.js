@@ -6,6 +6,7 @@ import "./styles/styles";
 import theme from "./Theme";
 import App from "./App";
 import Login from './components/Login/index';
+import RecoverPassword from "./components/RecoverPassword";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +17,7 @@ root.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/recover-password" element={<RecoverPassword />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>
