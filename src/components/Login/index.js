@@ -1,6 +1,7 @@
 import { Grid } from "@mui/material";
 import LoginForm from "./LoginForm";
-import ImageSwiper from "./ImageSwiper";
+import ImageSwiper from "../ImageSwiper";
+
 const Login = () => {
   return (
     <Grid
