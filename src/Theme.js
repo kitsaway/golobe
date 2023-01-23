@@ -18,7 +18,8 @@ let theme = createTheme({
   typography: {
     fontFamily: ["Montserrat", "sans-serif"].join(","),
     h2: {
-      fontWeight: 600,
+      fontWeight: 700,
+      fontSize: "40px",
       lineHeight: 1,
     },
     body1: {
