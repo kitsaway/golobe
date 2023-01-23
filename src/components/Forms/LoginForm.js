@@ -37,9 +37,9 @@ const LoginForm = () => {
         flexDirection: "column",
         justifyContent: "flex-start",
       }}
-      className="login-container"
+      className="form-container"
     >
-      <Box className="form-container">
+      <Box className="form-box">
         <Typography variant="h2" className="h2">
           Login
         </Typography>
