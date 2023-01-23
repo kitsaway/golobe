@@ -12,7 +12,7 @@ const Login = () => {
         justifyContent: { xs: "center", md: "space-evenly" },
         alignItems: "center",
         flexDirection: { xs: "column", md: "row" },
-        m: "24px auto",
+        m: "26px auto",
         overflow: "hidden",
       }}
     >
