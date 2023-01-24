@@ -15,11 +15,11 @@ const AuthFlow = ({ form }) => {
         alignItems: "flex-start",
         flexDirection: { xs: "column", md: "row" },
         m: "26px auto",
-        padding: "0 25px",
+        padding: { xs: "0 15px", md: "0" },
         overflow: "hidden",
       }}
     >
-      <Grid item xs={11} md={4.5}>
+      <Grid item xs={12} md={4.5}>
         <img
           src="https://ik.imagekit.io/xe8oxb5c5l/Golobe/Logo.png"
           alt="Golobe logo"
