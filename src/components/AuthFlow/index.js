@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Grid } from "@mui/material";
+import { Grid, Container } from "@mui/material";
 import ImageSwiper from "../ImageSwiper";
 
 const AuthFlow = ({ form }) => {
@@ -28,7 +28,7 @@ const AuthFlow = ({ form }) => {
           className="form-logo"
           onClick={() => navigate("/")}
         />
-        {form}
+        <Container className="form-container">{form}</Container>
       </Grid>
       <Grid item md={6} bg={5} sx={{ display: { xs: "none", md: "flex" } }}>
         <ImageSwiper />
