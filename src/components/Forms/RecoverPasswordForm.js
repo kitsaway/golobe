@@ -1,49 +1,58 @@
-import { Link, useNavigate } from "react-router-dom";
-import { Container, Box, Typography, TextField, Button } from "@mui/material";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { useNavigate } from "react-router-dom";
+import { Box } from "@mui/material";
+import BackButton from "./../Form/BackButton/index";
+import FormHeader from "../Form/FormHeader";
+import FormInput from "../Form/FormInput";
+import SubmitButton from "../Form/SubmitButton";
+
+const recoverPwdForm = {
+  backBtn: {
+    label: "Back to login",
+    linkPath: "/login",
+  },
+  header: "Forgot your password?",
+  subheader:
+    "Don’t worry, happens to all of us. Enter your email below to recover your password",
+  inputs: [
+    {
+      id: "email",
+      type: "email",
+      label: "Email",
+      name: "email",
+    },
+  ],
+  submitLabel: "Submit",
+};
 
 const RecoverPasswordForm = () => {
   const navigate = useNavigate();
   return (
-    <Container
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-      }}
-      className="form-container"
-    >
-      <Box className="form-box">
-        <Link to="/login" className="back-btn">
-          <ArrowBackIosIcon color="dark" />
-          <Typography variant="body2">Back to login</Typography>
-        </Link>
-        <Typography variant="h2" className="h2">
-          Forgot your password?
-        </Typography>
-        <Typography variant="body1" className="body1">
-          Don’t worry, happens to all of us. Enter your email below to recover
-          your password
-        </Typography>
-        <Box
-          component="form"
-          className="form"
-          autoComplete="off"
-          onSubmit={() => navigate("/verify-code")}
-        >
-          <TextField
-            type="email"
-            fullWidth
-            color="neutral"
-            className="input"
-            label="Email"
+    <Box className="form-box">
+      <BackButton
+        label={recoverPwdForm.backBtn.label}
+        linkPath={recoverPwdForm.backBtn.linkPath}
+      />
+      <FormHeader
+        header={recoverPwdForm.header}
+        subheader={recoverPwdForm.subheader}
+      />
+      <Box
+        component="form"
+        className="form"
+        autoComplete="off"
+        onSubmit={() => navigate("/verify-code")}
+      >
+        {recoverPwdForm.inputs.map((input) => (
+          <FormInput
+            key={input.id}
+            type={input.type}
+            name={input.name}
+            label={input.label}
           />
-          <Button type="submit" className="submit-btn" fullWidth>
-            Submit
-          </Button>
-        </Box>
+        ))}
+        <SubmitButton label={recoverPwdForm.submitLabel} />
       </Box>
-    </Container>
+    </Box>
   );
 };
 

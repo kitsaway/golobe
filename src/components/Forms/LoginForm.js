@@ -1,116 +1,72 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  Container,
-  Box,
-  Typography,
-  TextField,
-  Checkbox,
-  FormGroup,
-  Button,
-} from "@mui/material";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import InputAdornment from "@mui/material/InputAdornment";
-import IconButton from "@mui/material/IconButton";
-import Visibility from "@mui/icons-material/Visibility";
-import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import { Box, FormGroup } from "@mui/material";
+import FormHeader from "./../Form/FormHeader";
+import SubmitButton from "./../Form/SubmitButton";
+import FormRedirect from "../Form/FormRedirect";
+import FormCheckbox from "../Form/FormCheckbox";
+import FormInput from "./../Form/FormInput/index";
+
+const loginForm = {
+  header: "Login",
+  subheader: "Login to access your Golobe account",
+  inputs: [
+    {
+      id: "email",
+      type: "email",
+      label: "Email",
+      name: "email",
+    },
+    {
+      id: "pwd",
+      type: "password",
+      label: "Password",
+      name: "password",
+    },
+  ],
+  checkboxLabel: "Remember me",
+  submitLabel: "Login",
+  redirect: {
+    question: "Don’t have an account?",
+    linkPath: "/signup",
+    linkText: "Sign up",
+  },
+};
 
 const LoginForm = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const [checked, setChecked] = useState(false);
-
-  const handleClickShowPassword = () => setShowPassword((show) => !show);
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
-
-  const handleChange = (event) => {
-    setChecked(event.target.checked);
-  };
-
   return (
-    <Container
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-      }}
-      className="form-container"
-    >
-      <Box className="form-box">
-        <Typography variant="h2" className="h2">
-          Login
-        </Typography>
-        <Typography variant="body1" className="body1">
-          Login to access your Golobe account
-        </Typography>
-        <Box component="form" className="form" autoComplete="off">
-          <TextField
-            className="input"
-            type="email"
-            label="Email"
-            fullWidth
-            color="neutral"
+    <Box className="form-box">
+      <FormHeader header={loginForm.header} subheader={loginForm.subheader} />
+      <Box component="form" className="form" autoComplete="off">
+        {loginForm.inputs.map((input) => (
+          <FormInput
+            key={input.id}
+            type={input.type}
+            name={input.name}
+            label={input.label}
           />
-          <TextField
-            className="input"
-            label="Password"
-            type={showPassword ? "text" : "password"}
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
-                    edge="end"
-                  >
-                    {showPassword ? <VisibilityOff /> : <Visibility />}
-                  </IconButton>
-                </InputAdornment>
-              ),
-            }}
-            fullWidth
-            color="neutral"
-          />
-          <FormGroup
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              alignItems: "center",
-              width: "100%",
-            }}
-          >
-            <FormControlLabel
-              control={
-                <Checkbox
-                  checked={checked}
-                  onChange={handleChange}
-                  color="dark"
-                />
-              }
-              label="Remember me"
-              className="checkbox-label"
-              color="dark"
-            />
-            <Link to="/recover-password" className="orange">
-              Forgot Password
-            </Link>
-          </FormGroup>
-          <Button type="submit" className="submit-btn" fullWidth>
-            Login
-          </Button>
-          <Typography variant="body2" sx={{ textAlign: "center" }}>
-            Don't have an account?{" "}
-            <Link to="/signup" className="orange">
-              Sign up
-            </Link>
-          </Typography>
-        </Box>
+        ))}
+        <FormGroup
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
+          <FormCheckbox label={loginForm.checkboxLabel} />
+          <Link to="/recover-password" className="orange">
+            Forgot Password
+          </Link>
+        </FormGroup>
+        <SubmitButton label={loginForm.submitLabel} />
+        <FormRedirect
+          question={loginForm.redirect.question}
+          linkPath={loginForm.redirect.linkPath}
+          linkText={loginForm.redirect.linkText}
+        />
       </Box>
-    </Container>
+    </Box>
   );
 };
 

@@ -1,54 +1,64 @@
-import { Link, useNavigate } from "react-router-dom";
-import { Container, Box, Typography, TextField, Button } from "@mui/material";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { useNavigate } from "react-router-dom";
+import { Box, Typography } from "@mui/material";
+import BackButton from "./../Form/BackButton/index";
+import FormInput from "../Form/FormInput";
+import FormHeader from "../Form/FormHeader";
+import SubmitButton from "../Form/SubmitButton";
+
+const verifyForm = {
+  backBtn: {
+    label: "Back to login",
+    linkPath: "/login",
+  },
+  header: "Verify Code",
+  subheader: "An authentication code has been sent to your email.",
+  inputs: [
+    {
+      id: "code",
+      type: "text",
+      label: "Enter Code",
+      name: "code",
+    },
+  ],
+  submitLabel: "Verify",
+};
 
 const VerifyCodeForm = () => {
   const navigate = useNavigate();
   return (
-    <Container
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-      }}
-      className="form-container"
-    >
-      <Box className="form-box">
-        <Link to="/login" className="back-btn">
-          <ArrowBackIosIcon color="dark" />
-          <Typography variant="body2">Back to login</Typography>
-        </Link>
-        <Typography variant="h2" className="h2">
-          Verify Code
-        </Typography>
-        <Typography variant="body1" className="body1">
-          An authentication code has been sent to your email.
-        </Typography>
-        <Box
-          component="form"
-          className="form"
-          autoComplete="off"
-          onSubmit={() => navigate("/reset-password")}
-        >
-          <TextField
-            type="text"
-            fullWidth
-            color="neutral"
-            className="input"
-            label="Enter Code"
+    <Box className="form-box">
+      <BackButton
+        label={verifyForm.backBtn.label}
+        linkPath={verifyForm.backBtn.linkPath}
+      />
+      <FormHeader header={verifyForm.header} subheader={verifyForm.subheader} />
+      <Box
+        component="form"
+        className="form"
+        autoComplete="off"
+        onSubmit={() => navigate("/reset-password")}
+      >
+        {verifyForm.inputs.map((input) => (
+          <FormInput
+            key={input.id}
+            type={input.type}
+            name={input.name}
+            label={input.label}
           />
-          <Typography variant="body2" sx={{ textAlign: "left" }}>
-            Didn’t receive a code?{" "}
-            <Link to="/signup" className="orange">
-              Resend
-            </Link>
+        ))}
+        <Typography variant="body2" sx={{ display: "flex", textAlign: "left" }}>
+          Didn’t receive a code?
+          <Typography
+            variant="body2"
+            className="orange"
+            sx={{ marginLeft: "5px" }}
+          >
+            Resend
           </Typography>
-          <Button type="submit" className="submit-btn" fullWidth>
-            Verify
-          </Button>
-        </Box>
+        </Typography>
+        <SubmitButton label={verifyForm.submitLabel} />
       </Box>
-    </Container>
+    </Box>
   );
 };
 
