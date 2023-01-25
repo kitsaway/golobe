@@ -46,10 +46,10 @@ const VerifyCodeForm = () => {
             label={input.label}
           />
         ))}
-        <Typography variant="body2" sx={{ display: "flex", textAlign: "left" }}>
+        <Typography variant="subtitle2" sx={{ display: "flex", textAlign: "left" }}>
           Didn’t receive a code?
           <Typography
-            variant="body2"
+            variant="subtitle2"
             className="orange"
             sx={{ marginLeft: "5px" }}
           >
