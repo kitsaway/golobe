@@ -1,7 +1,7 @@
-import AuthFlow from "../AuthFlow"
+import LoginFlow from "../Flow/LoginFlow";
 import RecoverPasswordForm from "../Forms/RecoverPasswordForm";
 const RecoverPassword = () => {
-  return (<AuthFlow form={<RecoverPasswordForm />} />)
-}
+  return <LoginFlow form={<RecoverPasswordForm />} />;
+};
 
 export default RecoverPassword;

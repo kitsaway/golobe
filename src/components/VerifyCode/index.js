@@ -1,8 +1,8 @@
-import AuthFlow from "../AuthFlow";
+import LoginFlow from "../Flow/LoginFlow";
 import VerifyCodeForm from "../Forms/VerifyCodeForm";
 
 const VerifyCode = () => {
-  return <AuthFlow form={<VerifyCodeForm />} />;
+  return <LoginFlow form={<VerifyCodeForm />} />;
 };
 
 export default VerifyCode;

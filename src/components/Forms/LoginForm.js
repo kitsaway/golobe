@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { Box, FormGroup } from "@mui/material";
-import FormHeader from "./../Form/FormHeader";
-import SubmitButton from "./../Form/SubmitButton";
+import FormHeader from "../Form/FormHeader";
+import SubmitButton from "../Form/SubmitButton";
 import FormRedirect from "../Form/FormRedirect";
 import FormCheckbox from "../Form/FormCheckbox";
-import FormInput from "./../Form/FormInput/index";
+import FormInput from "../Form/FormInput";
 
 const loginForm = {
   header: "Login",

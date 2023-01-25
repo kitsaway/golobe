@@ -9,6 +9,7 @@ import Login from "./components/Login/index";
 import RecoverPassword from "./components/RecoverPassword";
 import VerifyCode from "./components/VerifyCode/index";
 import ResetPassword from "./components/ResetPassword/index";
+import SignUp from "./components/SignUp/index";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,6 +20,7 @@ root.render(
         <Routes>
           <Route path="/" element={<App />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/recover-password" element={<RecoverPassword />} />
           <Route path="/verify-code" element={<VerifyCode />} />
           <Route path="/reset-password" element={<ResetPassword />} />

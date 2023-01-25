@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
-import BackButton from "./../Form/BackButton/index";
+import BackButton from "../Form/BackButton";
 import FormHeader from "../Form/FormHeader";
 import FormInput from "../Form/FormInput";
 import SubmitButton from "../Form/SubmitButton";

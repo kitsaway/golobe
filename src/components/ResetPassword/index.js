@@ -1,8 +1,8 @@
-import AuthFlow from "../AuthFlow";
+import LoginFlow from "../Flow/LoginFlow";
 import ResetPasswordForm from "../Forms/ResetPasswordForm";
 
 const ResetPassword = () => {
-  return <AuthFlow form={<ResetPasswordForm />} />;
+  return <LoginFlow form={<ResetPasswordForm />} />;
 };
 
 export default ResetPassword;

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
-import FormInput from "./../Form/FormInput/index";
-import SubmitButton from "./../Form/SubmitButton/index";
+import FormInput from "../Form/FormInput";
+import SubmitButton from "../Form/SubmitButton";
 import FormHeader from "../Form/FormHeader";
 
 const resetPwdForm = {

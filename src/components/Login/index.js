@@ -1,8 +1,8 @@
-import AuthFlow from "../AuthFlow";
+import LoginFlow from "../Flow/LoginFlow";
 import LoginForm from "../Forms/LoginForm";
 
 const Login = () => {
-  return <AuthFlow form={<LoginForm />} />;
+  return <LoginFlow form={<LoginForm />} />;
 };
 
 export default Login;
