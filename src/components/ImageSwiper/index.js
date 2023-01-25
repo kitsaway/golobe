@@ -42,7 +42,7 @@ const ImageSwiper = () => {
             src={image.src}
             className="swiper-img"
             width={600}
-            height={700}
+            height={800}
             alt={image.alt}
           />
         </SwiperSlide>
