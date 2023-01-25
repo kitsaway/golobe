@@ -10,6 +10,7 @@ import RecoverPassword from "./components/RecoverPassword";
 import VerifyCode from "./components/VerifyCode/index";
 import ResetPassword from "./components/ResetPassword/index";
 import SignUp from "./components/SignUp/index";
+import PaymentMethod from "./components/PaymentMethod";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -24,6 +25,7 @@ root.render(
           <Route path="/recover-password" element={<RecoverPassword />} />
           <Route path="/verify-code" element={<VerifyCode />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/payment-method" element={<PaymentMethod />} />
         </Routes>
       </ThemeProvider>
     </BrowserRouter>
