@@ -46,16 +46,16 @@ const VerifyCodeForm = () => {
             label={input.label}
           />
         ))}
-        <Typography variant="subtitle2" sx={{ display: "flex", textAlign: "left" }}>
-          Didn’t receive a code?
+        <Box sx={{ display: "flex", flexDirection: "row" }}>
+          <Typography variant="body2">Didn’t receive a code?</Typography>
           <Typography
-            variant="subtitle2"
+            variant="body2"
             className="orange"
             sx={{ marginLeft: "5px" }}
           >
             Resend
           </Typography>
-        </Typography>
+        </Box>
         <SubmitButton label={verifyForm.submitLabel} />
       </Box>
     </Box>
