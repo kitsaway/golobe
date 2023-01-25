@@ -37,6 +37,11 @@ let theme = createTheme({
       fontSize: "12px",
       color: "#112211",
     },
+    body2: {
+      fontWeight: 600,
+      fontSize: "14px",
+      color: "#112211",
+    },
   },
   breakpoints: {
     values: {
