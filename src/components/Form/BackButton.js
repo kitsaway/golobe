@@ -6,7 +6,7 @@ const BackButton = ({ label, linkPath }) => {
   return (
     <Link to={linkPath} className="back-btn">
       <ArrowBackIosIcon color="dark" />
-      <Typography variant="body2">{label}</Typography>
+      <Typography variant="subtitle2">{label}</Typography>
     </Link>
   );
 };

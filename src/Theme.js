@@ -22,14 +22,19 @@ let theme = createTheme({
       fontSize: "40px",
       lineHeight: 1,
     },
-    body1: {
+    subtitle1: {
       fontWeight: 400,
       fontSize: "16px",
       color: "#112211",
     },
-    body2: {
+    subtitle2: {
       fontWeight: 600,
       fontSize: "14px",
+      color: "#112211",
+    },
+    body1: {
+      fontWeight: 400,
+      fontSize: "12px",
       color: "#112211",
     },
   },
