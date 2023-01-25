@@ -1,9 +1,8 @@
-import { useNavigate } from "react-router-dom";
-import { Grid, Container } from "@mui/material";
+import { Grid } from "@mui/material";
 import ImageSwiper from "../ImageSwiper";
+import FormLogo from "../Form/FormLogo";
 
-const AuthFlow = ({ form }) => {
-  const navigate = useNavigate();
+const LoginFlow = ({ form }) => {
   return (
     <Grid
       container
@@ -19,16 +18,9 @@ const AuthFlow = ({ form }) => {
         overflow: "hidden",
       }}
     >
-      <Grid item xs={12} md={4.5}>
-        <img
-          src="https://ik.imagekit.io/xe8oxb5c5l/Golobe/Logo.png"
-          alt="Golobe logo"
-          width={110}
-          height={36}
-          className="form-logo"
-          onClick={() => navigate("/")}
-        />
-        <Container className="form-container">{form}</Container>
+      <Grid item xs={12} md={4.5} className="form-container">
+        <FormLogo />
+        {form}
       </Grid>
       <Grid item md={6} bg={5} sx={{ display: { xs: "none", md: "flex" } }}>
         <ImageSwiper />
@@ -37,4 +29,4 @@ const AuthFlow = ({ form }) => {
   );
 };
 
-export default AuthFlow;
+export default LoginFlow;
