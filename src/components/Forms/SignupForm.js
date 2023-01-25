@@ -8,7 +8,7 @@ import FormRedirect from "../Form/FormRedirect";
 
 const signupForm = {
   header: "Sign Up",
-  subheader: "Let’s get you all st up so you can access your personal account.",
+  subheader: "Let’s get you all set up so you can access your personal account.",
   inputs: [
     {
       id: "fname",
