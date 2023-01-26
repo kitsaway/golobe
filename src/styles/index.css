@@ -18,3 +18,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.container.MuiContainer-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
