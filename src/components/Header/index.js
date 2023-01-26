@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Container, Box } from "@mui/system";
 import FlightIcon from "@mui/icons-material/Flight";
 import BedIcon from "@mui/icons-material/Bed";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
 import theme from "../../Theme";
 import { IconButton, Menu, MenuItem } from "@mui/material";
 
@@ -38,6 +38,7 @@ const mobileMenu = [
 ];
 
 const Header = () => {
+  const location = useLocation();
   const [anchorElNav, setAnchorElNav] = useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -51,21 +52,19 @@ const Header = () => {
   return (
     <Container
       maxWidth={false}
-      className="header-container"
+      className={`header-container ${
+        location.pathname === "/" ? "white-bg" : "transparent-bg"
+      }`}
       sx={{
         [theme.breakpoints.down("bg")]: { padding: "16px 20px" },
         [theme.breakpoints.up("bg")]: { padding: "21px 54px" },
       }}
     >
-      <Link to="/">
-        <img
-          className="logo"
-          src="https://ik.imagekit.io/xe8oxb5c5l/Golobe/Logo.png"
-          alt="Golobe Logo"
-          width={110}
-          height={36}
-        />
-      </Link>
+      <Box
+        className={`logo ${
+          location.pathname === "/" ? "white-logo" : "black-logo"
+        }`}
+      />
       {/* Desktop/Tablet Menu */}
       <Box sx={{ display: { xs: "none", md: "flex" } }} className="nav-bar">
         <Box
@@ -76,7 +75,15 @@ const Header = () => {
           }}
         >
           {pages.map((page) => (
-            <Link key={page.id} to={page.link} className="header-link">
+            <Link
+              key={page.id}
+              to={page.link}
+              className={`header-link ${
+                location.pathname === "/"
+                  ? "header-link-white"
+                  : "header-link-black"
+              }`}
+            >
               {page.icon} {page.title}
             </Link>
           ))}
@@ -88,10 +95,22 @@ const Header = () => {
             fontSize: { md: "16px", bg: "16px", lg: "22px" },
           }}
         >
-          <Link to="login" className="header-link">
+          <Link
+            to="login"
+            className={`header-link ${
+              location.pathname === "/"
+                ? "header-link-white"
+                : "header-link-black"
+            }`}
+          >
             Login
           </Link>
-          <Link to="signup" className="header-link signup">
+          <Link
+            to="signup"
+            className={`header-link signup ${
+              location.pathname === "/" ? "signup-white" : "signup-black"
+            }`}
+          >
             Sign up
           </Link>
         </Box>
@@ -106,7 +125,9 @@ const Header = () => {
           color="inherit"
           onClick={handleOpenNavMenu}
         >
-          <MenuIcon />
+          <MenuIcon
+            htmlColor={location.pathname === "/" ? "#FFF" : "#112211"}
+          />
         </IconButton>
         <Menu
           id="menu-bar"
