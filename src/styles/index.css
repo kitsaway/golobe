@@ -4,6 +4,7 @@
 :root {
   --blackish-green: #112211;
   --mint-green: #8DD3BB;
+  --light-mint-green: #CDEAE1;
   --mint-green-hover: #9BE0C8;
   --mint-green-focus: #A5EBD3;
   --slamon-orange: #FF8682;
@@ -20,6 +21,7 @@
 }
 
 .container.MuiContainer-root {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
