@@ -1,0 +1,107 @@
+.footer-container {
+  width: 100%;
+  min-height: 500px;
+  position: relative;
+  padding-top: 170px;
+  background-color: var(--slamon-orange);
+  box-shadow: rgba(0, 0, 0, 0.02);
+}
+
+.subscribe-container {
+  width: 80%;
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0px 24px 0px 24px;
+  border-radius: 20px;
+  background-color: var(--light-mint-green);
+  gap: 16px;
+}
+
+.subscribe-text {
+  max-width: 593px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 8px;
+}
+
+.subscribe-text .subscribe-h2 {
+  max-width: 360px;
+  padding-bottom: 16px;
+}
+
+.subscribe-text .subscribe-subtitle1 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.subscribe-text .subscribe-body1 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.subscribe-form  {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  margin-top: 16px;
+}
+.subscribe-form .MuiInputBase-input.MuiOutlinedInput-input {
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: var(--white);
+}
+
+.subscribe-form .MuiTextField-root .MuiOutlinedInput-notchedOutline {
+  border: none;
+  border-radius: 4px;
+}
+
+.subscribe-form .MuiButtonBase-root.MuiButton-root {
+  background-color: var(--blackish-green);
+  color: var(--white);
+  text-transform: capitalize;
+  padding: 8px 16px;
+  width: 104px;
+}
+
+.mailbox {
+  max-width: 400px;
+  height: 302px;
+}
+
+.mailbox img {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  .footer-container {
+    height: 80%;
+    padding-top: 230px;
+  }
+  .subscribe-container {
+    height: 380px;
+  }
+  .subscribe-form {
+    flex-direction: column;
+  }
+  .subscribe-form .MuiButtonBase-root.MuiButton-root {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mailbox {
+    display: none;
+  }
+}
